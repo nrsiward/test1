@@ -1,3 +1,4 @@
 a second file
 a second line
 line three
+a fourth line
