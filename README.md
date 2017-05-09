@@ -20,5 +20,5 @@ or
 
 `pip install --user fontmake`
 
-If you want to isolate all the libraries fontmake needs, you can install it in a virtual environment
-and run this script there. A virtual environment won't work simply with smith.
+If you want to isolate all eleven of the libraries fontmake needs, you can install it in a virtual environment
+and run the scripts there. Please note that a virtual environment won't work simply with smith.
