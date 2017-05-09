@@ -1,6 +1,0 @@
-"test" 
-add a second line
-a third line
-another line 4
-resolve conflicting line 5
-add line 6
