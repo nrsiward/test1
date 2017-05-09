@@ -12,9 +12,13 @@ the compilation of fea and the renaming of glyphs to production names.
 
 ## Installation
 
-The easiest way to install all the needed libraries is to install fontmake.
+The easiest way to install all the needed libraries is to install fontmake. Either of the below should work:
 
-[sudo] pip install [--user] fontmake
+`sudo pip install fontmake`
+
+or
+
+`pip install --user fontmake`
 
 If you want to isolate all the libraries fontmake needs, you can install it in a virtual environment
-and run this script there.
+and run this script there. A virtual environment won't work simply with smith.
