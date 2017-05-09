@@ -22,3 +22,8 @@ or
 
 If you want to isolate all eleven of the libraries fontmake needs, you can install it in a virtual environment
 and run the scripts there. Please note that a virtual environment won't work simply with smith.
+
+## Adding OpenType support
+FWIW, OpenType support can be added using fonttools after running either ufo2ttf script. features.fea can be compiled using the command line:
+
+`fonttools feaLib [-h] [-o <fn>] [-v] <fea fn> <ttf fn>`
