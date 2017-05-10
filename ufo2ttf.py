@@ -6,7 +6,6 @@
 # If you want to isolate all the libraries fontmake needs,
 # you can install it in a virtual environment and run this script there
 
-
 from __future__ import print_function
 import sys
 import defcon, ufo2ft.outlineCompiler
@@ -22,10 +21,10 @@ PUBLIC_PREFIX = 'public.'
 
 ufo = defcon.Font(ufo_fn)
 
-# print('Converting UFO to ttf and compiling fea
+# print('Converting UFO to ttf and compiling fea')
 # font = ufo2ft.compileTTF(ufo,
-    # glyphOrder = ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'),
-    # useProductionNames = False)
+#     glyphOrder = ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'),
+#     useProductionNames = False)
 
 print('Converting UFO to ttf without OT')
 outlineCompiler = ufo2ft.outlineCompiler.OutlineTTFCompiler(ufo,

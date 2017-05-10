@@ -34,7 +34,7 @@ def remove_overlaps(ufo):
         try:
             booleanOperations.union(contours, glyph.getPointPen())
         except BooleanOperationsError:
-            print("Failed to remove overlaps for %s: %r", font_name, glyph.name)
+            print("Failed to remove overlaps for %r", glyph.name)
             raise
 
 def decompose_glyphs(ufo):
@@ -77,10 +77,10 @@ remove_overlaps(ufo)
 print('Converting curves')
 cu2qu.ufo.fonts_to_quadratic([ufo], reverse_direction=True)
 
-# print('Converting UFO to ttf and compiling fea
+# print('Converting UFO to ttf and compiling fea')
 # font = ufo2ft.compileTTF(ufo,
-    # glyphOrder = ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'), 
-    # useProductionNames = False)
+#     glyphOrder = ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'),
+#     useProductionNames = False)
 
 print('Converting UFO to ttf without OT')
 outlineCompiler = ufo2ft.outlineCompiler.OutlineTTFCompiler(ufo,
