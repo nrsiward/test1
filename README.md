@@ -2,13 +2,19 @@
 
 Convert a UFO into a ttf file without OpenType tables using minimal processing (compared to fontmake).
 
-Compared to the below it does not decompose glyphs or remove overlaps and curve conversion seems to happen in a different way.
-
+Compared to the below it does not decompose glyphs or remove overlaps and curve conversion seems to happen 
+in a different way.
 
 ## ufo2ttf_fontmake.py
 
 This script should be functionally equivalent to how fontmake converts a UFO to a ttf file except that it excludes
 the compilation of fea and the renaming of glyphs to production names.
+
+## psfchangeglyphsnames.py
+
+Rename the glpyhs in a ttf file based on production names in a UFO using same technique as fontmake.
+Production names come from ufo.lib.public.postscriptNames according to ufo2ft comments, 
+but I don't know exactly where in the UFO that is.
 
 ## Installation
 
@@ -21,8 +27,9 @@ or
 
 `pip install --user fontmake`
 
-If you want to isolate all eleven of the libraries fontmake needs, you can install fontmake in a virtual environment
-and run the scripts there. Please note that a virtual environment won't work simply with smith.
+If you want to isolate all eleven of the libraries fontmake needs, you can install fontmake in a 
+python virtual environment and run the scripts there. Please note that a virtual environment won't work simply 
+with smith.
 
 If your smith vm already has fontmake installed, try running ufo2ttf.py. If it produces errors concerning modules 
 that cannot be found, you may need to use Python 2 and update the fontmake dependencies:
