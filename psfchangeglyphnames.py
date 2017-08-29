@@ -1,5 +1,7 @@
 # Rename the glpyhs in a ttf file based on production names in a UFO
-#  using same technique as fontmake
+# using same technique as fontmake.
+# Production names come from ufo.lib.public.postscriptNames according to ufo2ft comments
+# but I don't know exactly where in the UFO that is
 
 # The easiest way to install all the needed libraries is to install fontmake.
 #   [sudo] pip install fontmake
