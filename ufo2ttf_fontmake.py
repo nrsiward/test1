@@ -7,7 +7,6 @@
 # If you want to isolate all the libraries fontmake needs,
 # you can install it in a virtual environment and run this script there
 
-
 from __future__ import print_function
 import sys
 import defcon, booleanOperations, cu2qu, cu2qu.ufo, ufo2ft, ufo2ft.outlineCompiler, fontTools
@@ -83,11 +82,11 @@ cu2qu.ufo.fonts_to_quadratic([ufo], reverse_direction=True)
 #     useProductionNames = False)
 
 print('Converting UFO to ttf without OT')
+#glyphSet arg not needed since ufo already modified
 outlineCompiler = ufo2ft.outlineCompiler.OutlineTTFCompiler(ufo,
-    glyphOrder = ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'), 
-    convertCubics = False)
+    glyphOrder=ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'))
 font = outlineCompiler.compile()
-    
+
 print('Saving ttf file')
 font.save(ttf_fn)
 

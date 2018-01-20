@@ -8,7 +8,7 @@
 
 from __future__ import print_function
 import sys
-import defcon, ufo2ft.outlineCompiler
+import defcon, ufo2ft.outlineCompiler, ufo2ft.preProcessor
 
 try:
     ufo_fn = sys.argv[1]
@@ -27,9 +27,12 @@ ufo = defcon.Font(ufo_fn)
 #     useProductionNames = False)
 
 print('Converting UFO to ttf without OT')
-outlineCompiler = ufo2ft.outlineCompiler.OutlineTTFCompiler(ufo,
-    glyphOrder=ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'),
-    convertCubics=True)
+#the named arg values are the same as the default values
+preProcessor = ufo2ft.preProcessor.TTFPreProcessor(ufo, removeOverlaps=False, convertCubics=True)
+glyphSet = preProcessor.process()
+
+outlineCompiler = ufo2ft.outlineCompiler.OutlineTTFCompiler(ufo, glyphSet=glyphSet,
+    glyphOrder=ufo.lib.get(PUBLIC_PREFIX + 'glyphOrder'))
 font = outlineCompiler.compile()
 
 print('Saving ttf file')
