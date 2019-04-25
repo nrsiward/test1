@@ -2,4 +2,4 @@ a second file
 a second line
 line three
 a fourth line
-a different fifth line
+a resolved fifth line
