@@ -4,3 +4,4 @@ a third line
 another line 4
 resolve conflicting line 5
 add line 6
+add line 7
