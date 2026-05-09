@@ -1,0 +1,1 @@
+A test file to test adding a commit with a message that closes an issue.
