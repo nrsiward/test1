@@ -1,1 +1,2 @@
 A test file to test adding a commit with a message that closes an issue.
+A second line to test closing a private issue on a different repo (silnrsi/font-lcg-private issue 1)
